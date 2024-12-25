@@ -233,45 +233,41 @@ let ourGallery = document.querySelectorAll(".gallery .box .image img").forEach(i
 
 let ScrollUp = document.querySelectorAll(".ScrollUp-options span");
 let godown = document.querySelectorAll(".go-down");
+let ScrollUplocalItem = localStorage.getItem("ScrollUp_options");
+
+if (ScrollUplocalItem !== null) {
+    ScrollUp.forEach(span => {
+        span.classList.remove("active");
+    });
+
+    if (ScrollUplocalItem === 'block') {
+        godown.forEach(item => {
+            item.style.display = 'block';
+        });
+        document.querySelector(".ScrollUp-options .yes").classList.add("active");
+    } else {
+        godown.forEach(item => {
+            item.style.display = 'none';
+        });
+        document.querySelector(".ScrollUp-options .no").classList.add("active");
+    }
+}
 
 ScrollUp.forEach(span => {
     span.addEventListener("click", (e) => {
-        //s إزالة التفعيل من جميع الخيارات وإضافة التفعيل للعنصر الحالي
-        ScrollUp.forEach(option => option.classList.remove("active"));
-        span.classList.add("active");
-
-        // حفظ الحالة الحالية في localStorage
-        localStorage.setItem('scrollUpState', span.dataset.background);
-
-        // عرض أو إخفاء عناصر go-down بناءً على الخيار المحدد
         godown.forEach(item => {
             if (span.dataset.background === 'show') {
                 item.style.display = 'block';
+                localStorage.setItem("ScrollUp_options", 'block');
             } else {
                 item.style.display = 'none';
+                localStorage.setItem("ScrollUp_options", 'none');
             }
         });
-    });
-});
 
-// عند تحميل الصفحة، استعادة الحالة المحفوظة من localStorage
-window.addEventListener('DOMContentLoaded', () => {
-    const savedState = localStorage.getItem('scrollUpState');
-    if (savedState) {
         ScrollUp.forEach(span => {
-            if (span.dataset.background === savedState) {
-                span.classList.add("active");
-            } else {
-                span.classList.remove("active");
-            }
+            span.classList.remove("active");
         });
-
-        godown.forEach(item => {
-            if (savedState === 'show') {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
+        span.classList.add("active");
+    });
 });
