@@ -361,6 +361,27 @@ li {
     background-color: var(--main--color);
 }
 
+.settings-box .reset-options {
+    background-color: var(--mm--color);
+    border: none;
+    width: 178px;
+    margin: 10px auto;
+    display: block;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    cursor: pointer;
+}
+
+.settings-box .reset-options:hover {
+    background-color: var(--main--color);
+}
+
 /* End  Settings Box*/
 /* Start Header Section  */
 .header {

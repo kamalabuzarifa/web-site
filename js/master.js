@@ -271,3 +271,17 @@ ScrollUp.forEach(span => {
         span.classList.add("active");
     });
 });
+
+//Reset options
+document.querySelector(".reset-options").onclick = function () {
+    // إزالة الإعدادات المخزنة في Local Storage
+    localStorage.removeItem("color_option");
+    localStorage.removeItem("mm_color_option");
+    localStorage.removeItem("background_option");
+    localStorage.removeItem("Image_option");
+    localStorage.removeItem("activeLinkId");
+    localStorage.removeItem("ScrollUp_options");
+
+    // إعادة تحميل الصفحة لتطبيق التغييرات
+    window.location.reload();
+}
