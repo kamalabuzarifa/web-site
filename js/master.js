@@ -236,9 +236,12 @@ let godown = document.querySelectorAll(".go-down");
 
 ScrollUp.forEach(span => {
     span.addEventListener("click", (e) => {
-        // إزالة التفعيل من جميع الخيارات وإضافة التفعيل للعنصر الحالي
+        //s إزالة التفعيل من جميع الخيارات وإضافة التفعيل للعنصر الحالي
         ScrollUp.forEach(option => option.classList.remove("active"));
         span.classList.add("active");
+
+        // حفظ الحالة الحالية في localStorage
+        localStorage.setItem('scrollUpState', span.dataset.background);
 
         // عرض أو إخفاء عناصر go-down بناءً على الخيار المحدد
         godown.forEach(item => {
