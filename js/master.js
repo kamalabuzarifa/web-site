@@ -292,3 +292,47 @@ document.oncopy = () => {
     let final_text = text + "\n\nFor More Information" + url;
     navigator.clipboard.writeText(final_text);
 };
+
+const form = document.querySelector("form");
+const inputs = document.querySelectorAll(".req");
+// console.log(form, inputs);
+//selector . event = action
+form.onsubmit = (event) => {
+    inputs.forEach(el => {
+        if (el.value == "") {
+            event.preventDefault(); // الاغاء الرسالة بدون بيانات
+            el.nextElementSibling.style.display ="block";
+            el.style.borderColor = "red";
+        } else {
+            el.nextElementSibling.style.display ="none";
+            el.style.borderColor = "#ccc";
+        }
+    })
+}
+//reset input style while typing
+inputs.forEach(el => {
+    // el.onkeyup = () => {
+    el.onblur = () => {
+        if (el.value != "") {
+            el.nextElementSibling.style.display = "none";
+            el.style.borderColor = "#ccc";
+        } else {
+            el.nextElementSibling.style.display = "block";
+            el.style.borderColor = "red";
+        }
+    }
+})
+//see passworde on click
+const password = document.querySelector(".pass input");
+const i = document.querySelector(".pass i");
+i.onclick = () => {
+    if (password.type == "password") {
+        password.type = "text";
+        i.classList.remove("fa-eye");
+        i.classList.add("fa-eye-slash");
+    } else {
+        password.type = "password";
+        i.classList.remove("fa-eye-slash");
+        i.classList.add("fa-eye");
+    }
+};
