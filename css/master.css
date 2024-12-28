@@ -967,7 +967,7 @@ li {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 30px;
     padding: 30px;
 }
@@ -1067,7 +1067,7 @@ li {
 
 .gallery .box .image:hover img {
     transform: rotate(5deg) scale(1.1);
-    -webkit-transform: rotate(5deg) scale(1.1);
+    -webkit-transform: rotate(5deg) scale(1.3);
     -moz-transform: rotate(5deg) scale(1.1);
     -ms-transform: rotate(5deg) scale(1.1);
     -o-transform: rotate(5deg) scale(1.1);
@@ -1100,11 +1100,11 @@ li {
     text-align: center;
 }
 
-@media (min-width: 666px) {
+/* @media (min-width: 666px) {
     .gallery .box {
         width: 280px;
     }
-}
+} */
 
 /* Popup Image */
 .popup-box img {

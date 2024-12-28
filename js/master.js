@@ -301,10 +301,10 @@ form.onsubmit = (event) => {
     inputs.forEach(el => {
         if (el.value == "") {
             event.preventDefault(); // الاغاء الرسالة بدون بيانات
-            el.nextElementSibling.style.display ="block";
+            el.nextElementSibling.style.display = "block";
             el.style.borderColor = "red";
         } else {
-            el.nextElementSibling.style.display ="none";
+            el.nextElementSibling.style.display = "none";
             el.style.borderColor = "#ccc";
         }
     })
