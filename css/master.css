@@ -869,12 +869,12 @@ li {
 
 
 @media (min-width: 767px) {
- .services .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 40px;
-    padding: 10px 50px;
-}
+    .services .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 40px;
+        padding: 10px 50px;
+    }
 }
 
 .services .container .box {
@@ -896,6 +896,7 @@ li {
         gap: 15px;
         margin-left: 25px;
     }
+
     .services .container .box {
         width: 90%;
         height: 250px;
@@ -906,12 +907,13 @@ li {
 }
 
 @media (min-width: 500px) and (max-width:950px) {
-    .services  .container {
+    .services .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 7px;
         padding: 0px;
     }
+
     .services .container .box {
         width: 80%;
         height: 250px;
@@ -1151,7 +1153,6 @@ li {
     }
 }
 
-
 @media (max-width: 349px) {
     .gallery {
         display: grid;
@@ -1167,9 +1168,10 @@ li {
 }
 
 @media (min-width: 349px) and (max-width: 666px) {
-    .gallery{
-    padding: 0 0 0 10px;
+    .gallery {
+        padding: 0 0 0 10px;
     }
+
     .gallery .box {
         width: 95%;
     }
@@ -1258,12 +1260,6 @@ li {
     text-align: center;
 }
 
-/* @media (min-width: 666px) {
-    .gallery .box {
-        width: 280px;
-    }
-} */
-
 /* Popup Image */
 .popup-box img {
     width: 100%;
@@ -1328,7 +1324,8 @@ li {
     position: relative;
     overflow: hidden;
 }
-.timeline .timeline-content i{
+
+.timeline .timeline-content i {
     background-color: var(--main--color);
     padding: 8px 10px;
     border-radius: 0 5px 0 0;
@@ -1554,9 +1551,9 @@ li {
         font-weight: bold;
         color: var(--main--color);
         margin: 0 0 10px;
-    }   
-    
-    .timeline .timeline-content .content h3.app{
+    }
+
+    .timeline .timeline-content .content h3.app {
         font-weight: bold;
         width: 236px;
     }
@@ -1617,11 +1614,11 @@ li {
 
 @media (min-width:767px) {
     .features {
-    grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media  (min-width:500px) and (max-width:767px) {
+@media (min-width:500px) and (max-width:767px) {
     .features {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1629,7 +1626,7 @@ li {
 
 
 .featuresm .feat-box {
-    position:relative;
+    position: relative;
     background-color: var(--mm--color);
     padding: 15px 13px;
     border-radius: 6px;
@@ -1654,21 +1651,21 @@ li {
     box-shadow: -6px 6px 16px 0px var(--mm--color);
 }
 
-@media (min-width:320px){
-.featuresm .feat-box img {
-    width: 96px;
-    height: 96px;
-    border: 2px solid #eee;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    object-fit: cover;
-}
+@media (min-width:320px) {
+    .featuresm .feat-box img {
+        width: 96px;
+        height: 96px;
+        border: 2px solid #eee;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        object-fit: cover;
+    }
 }
 
-@media (max-width:320px){
+@media (max-width:320px) {
     .featuresm .feat-box img {
         position: absolute;
         width: 80px;
@@ -1686,7 +1683,7 @@ li {
     }
 }
 
-.featuresm .feat-box h4{
+.featuresm .feat-box h4 {
     text-transform: capitalize;
     font-weight: bold;
     color: var(--main--color);
@@ -1770,22 +1767,25 @@ li {
 }
 
 @media (min-width:767px) {
-    .testimonialsm .testimonials .testimonials-content  {
-         grid-template-columns: repeat(3, 1fr);
+    .testimonialsm .testimonials .testimonials-content {
+        grid-template-columns: repeat(3, 1fr);
     }
+
     .testimonialsm .testimonials .testimonials-content .ts-box {
-        height:auto;
+        height: auto;
     }
 }
 
-@media  (min-width:500px) and (max-width:767px) {
-    .testimonialsm .testimonials .testimonials-content  {
+@media (min-width:500px) and (max-width:767px) {
+    .testimonialsm .testimonials .testimonials-content {
         grid-template-columns: repeat(2, 1fr);
     }
-     .testimonialsm .testimonials .testimonials-content .ts-box {
-        height:280px;
+
+    .testimonialsm .testimonials .testimonials-content .ts-box {
+        height: 280px;
     }
 }
+
 .testimonialsm .testimonials .testimonials-content .ts-box {
     position: relative;
     z-index: 2;
@@ -2072,6 +2072,7 @@ li {
 .discount .form h2 {
     font-size: 33px;
 }
+
 form small {
     font-size: 12px;
     color: #f00;
@@ -2086,13 +2087,13 @@ form small {
 .pass i {
     position: absolute;
     top: 15px;
-    right:15px;
+    right: 15px;
     cursor: pointer;
 }
 
-@media(max-width:375px){
+@media(max-width:375px) {
     .pass i {
-    right: 42px;
+        right: 42px;
     }
 }
 
@@ -2214,6 +2215,7 @@ form small {
     -ms-transition: padding-left 0.3s ease, color 0.3s ease;
     -o-transition: padding-left 0.3s ease, color 0.3s ease;
 }
+
 /* 
 @media (max-width: 767px) {
     .footer .containermm .box .links li {
@@ -2225,18 +2227,18 @@ form small {
 
 @media (max-width: 767px) {
     .footer .containermm {
-        display: grid
-;
+        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 16px;
         padding: 20px;
     }
+
     .footer .containermm .box .links li {
         display: flex;
         align-items: center;
         /* justify-content: center; */
-        width :250px;
-        margin:0 auto;
+        width: 250px;
+        margin: 0 auto;
     }
 }
 
@@ -2256,7 +2258,7 @@ form small {
 }
 
 .footer .containermm .box .links p {
-    font-size:23px;
+    font-size: 23px;
     color: #b9b9b9;
     transition: color 0.3s ease;
     margin: 0;
