@@ -1151,6 +1151,7 @@ li {
     }
 }
 
+
 @media (max-width: 349px) {
     .gallery {
         display: grid;
