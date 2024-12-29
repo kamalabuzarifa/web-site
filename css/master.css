@@ -865,14 +865,16 @@ li {
 .services {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
-    background-color: var(--section-background-color);
 }
 
-.services .container {
+
+@media (min-width: 767px) {
+ .services .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 40px;
     padding: 10px 50px;
+}
 }
 
 .services .container .box {
@@ -885,6 +887,36 @@ li {
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
     position: relative;
+}
+
+@media (max-width: 500px) {
+    .services {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        margin-left: 25px;
+    }
+    .services .container .box {
+        width: 90%;
+        height: 250px;
+        /* margin: 10px calc((100% - 97%) / 2); */
+        margin: 0 0 20px 5px;
+        padding: 20px 0;
+    }
+}
+
+@media (min-width: 500px) and (max-width:950px) {
+    .services  .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+        padding: 0px;
+    }
+    .services .container .box {
+        width: 80%;
+        height: 250px;
+        margin: 10px auto;
+    }
 }
 
 .services .container .box:hover {
@@ -1130,6 +1162,15 @@ li {
 
     .gallery .box {
         width: 270px;
+    }
+}
+
+@media (min-width: 349px) and (max-width: 666px) {
+    .gallery{
+    padding: 0 0 0 10px;
+    }
+    .gallery .box {
+        width: 95%;
     }
 }
 
