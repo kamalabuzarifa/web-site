@@ -224,10 +224,10 @@ let ourGallery = document.querySelectorAll(".gallery .box .image img").forEach(i
         });
 
         // Close Popup On Overlay Click
-        // overlay.addEventListener('click', () => {
-        //     popupBox.remove();
-        //     overlay.remove();
-        // });
+        overlay.addEventListener('click', () => {
+            popupBox.remove();
+            overlay.remove();
+        });
     });
 });
 
