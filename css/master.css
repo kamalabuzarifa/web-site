@@ -1780,6 +1780,7 @@ li {
     }
 }
 
+/* 
 @media (max-width:320px) {
     .featuresm .feat-box img {
         position: absolute;
@@ -1789,16 +1790,16 @@ li {
         left: -20px;
         border: 6px solid #ececec;
         /* border: 2px solid #eee; */
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        object-fit: cover;
-    }
+border-radius: 50%;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+object-fit: cover;
+}
 }
 
-.featuresm .feat-box h4 {
+*/ .featuresm .feat-box h4 {
     text-transform: capitalize;
     font-weight: bold;
     color: var(--main--color);
