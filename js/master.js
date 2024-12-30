@@ -285,6 +285,60 @@ document.querySelector(".reset-options").onclick = function () {
     // إعادة تحميل الصفحة لتطبيق التغييرات
     window.location.reload();
 }
+let details = document.querySelectorAll(".services .box .details").forEach(det => {
+    det.addEventListener('click', (e) => {
+        // Create Overlay Element
+        let overlay = document.createElement("div");
+        overlay.className = 'popup-overlay';
+        document.body.appendChild(overlay);
+
+        // Create Popup Box
+        let popupBoxdetails = document.createElement("div");
+        popupBoxdetails.className = 'popup-box-details';
+
+        // Get the next sibling element (the div with details)
+        const nextElement = det.nextElementSibling;
+        if (nextElement) {
+            // Extract the <h3> and <p> elements from the details div
+            const h3Element = nextElement.querySelector("h3");
+            const pElement = nextElement.querySelector("p");
+
+            // Create and append the title (h3)
+            let popupTitle = document.createElement("h3");
+            popupTitle.className = 'popup-titleh3';
+            popupTitle.textContent = h3Element ? h3Element.textContent : "Default Title"; // النص الافتراضي إذا لم يوجد عنوان
+            popupBoxdetails.appendChild(popupTitle);
+
+            // Create and append the paragraph (p)
+            let popupParagraph = document.createElement("p");
+            popupParagraph.className = 'popup-titleP';
+            popupParagraph.textContent = pElement ? pElement.textContent : "No details available."; // النص الافتراضي إذا لم يوجد وصف
+            popupBoxdetails.appendChild(popupParagraph);
+        }
+
+        // Add the popup box to the body
+        document.body.appendChild(popupBoxdetails);
+
+        // Create the close button
+        let closeButton = document.createElement("span");
+        closeButton.className = 'close-button';
+        closeButton.textContent = "X";
+        popupBoxdetails.appendChild(closeButton);
+
+        // Close popup on button click
+        closeButton.addEventListener('click', () => {
+            popupBoxdetails.remove();
+            overlay.remove();
+        });
+
+        // Close popup on overlay click
+        overlay.addEventListener('click', () => {
+            popupBoxdetails.remove();
+            overlay.remove();
+        });
+    });
+});
+
 
 document.oncopy = () => {
     let text = window.getSelection().toString();
