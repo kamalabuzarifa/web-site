@@ -2152,7 +2152,6 @@ li {
     width: 100px;
     margin: 0 auto;
     padding: 15px;
-    background-color: var(--mm--color);
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -2175,8 +2174,12 @@ li {
     }
 }
 
-.discount .form [type="submit"]:hover {
+.discount .form .abled {
     background-color: var(--main--color);
+}
+
+.discount .form .disabled {
+    background-color: var(--mm--color);
 }
 
 .discount .form form {
@@ -2210,6 +2213,35 @@ form small {
     .pass i {
         right: 42px;
     }
+}
+
+.pass .divlist {
+    position: absolute;
+    display: flex;
+    top: -15px;
+    left: 5px;
+}
+
+.pass .divlist .passlen,
+.pass .divlist .passsmall,
+.pass .divlist .passcapital,
+.pass .divlist .passspecial,
+.pass .divlist .passdigits {
+    list-style-type: disc;
+    color: var(--mm--color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* margin: 0 4px; */
+}
+
+.ps {
+    list-style-type: disc;
+    color: var(--main--color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* margin: 0 4px; */
 }
 
 .discount .content {

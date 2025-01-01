@@ -390,3 +390,63 @@ i.onclick = () => {
         i.classList.add("fa-eye");
     }
 };
+
+const passlen = document.querySelector(".pass .passlen");
+const passsmall = document.querySelector(".pass .passsmall");
+const passcapital = document.querySelector(".pass .passcapital");
+const passspecial = document.querySelector(".pass .passspecial");
+const passdigits = document.querySelector(".pass .passdigits");
+
+const btn = document.querySelector(".submit");
+password.onkeyup = () => {
+    let errors = [];
+    if (password.value.length >= 8) {
+        passlen.classList.add("ps");
+        passlen.classList.remove("passlen");
+    } else {
+        passlen.classList.remove("ps");
+        passlen.classList.add("passlen");
+        errors.push("length error");
+    }
+    if (/[a-z]/.test(password.value)) {
+        passsmall.classList.add("ps");
+        passsmall.classList.remove("passsmall");
+    } else {
+        passsmall.classList.remove("ps");
+        passsmall.classList.add("passsmall");
+        errors.push("small error");
+    }
+    if (/[A-Z]/.test(password.value)) {
+        passcapital.classList.add("ps");
+        passcapital.classList.remove("passcapital");
+    } else {
+        passcapital.classList.remove("ps");
+        passcapital.classList.add("passcapital");
+        errors.push("capital error");
+    }
+
+    if (/[@$!%*?&]/.test(password.value)) {
+        passspecial.classList.add("ps");
+        passspecial.classList.remove("passspecial");
+    } else {
+        passspecial.classList.remove("ps");
+        passspecial.classList.add("passspecial");
+        errors.push("special error");
+    }
+
+    if (/[0-9]/.test(password.value)) {
+        passdigits.classList.add("ps");
+        passdigits.classList.remove("passdigits");
+    } else {
+        passdigits.classList.remove("ps");
+        passdigits.classList.add("passdigits");
+        errors.push("digits error");
+    }
+    if (errors.length > 0) {
+        btn.classList.remove("abled");
+        btn.classList.add("disabled");
+    } else {
+        btn.classList.add("abled");
+        btn.classList.remove("disabled");
+    }
+}
