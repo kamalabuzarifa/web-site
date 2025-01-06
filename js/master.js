@@ -450,3 +450,11 @@ password.onkeyup = () => {
         btn.classList.remove("disabled");
     }
 }
+
+// const inputName = document.querySelectorAll("input");
+// Add click listeners to each input element
+// inputName.forEach((input) => {
+//     input.addEventListener("blur", () => {
+//         console.log("Input clicked");
+//     });
+// });
