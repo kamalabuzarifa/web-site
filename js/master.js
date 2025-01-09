@@ -472,6 +472,26 @@ password.onkeyup = () => {
     }
 }
 
+let myRequest = new XMLHttpRequest();
+
+// Corrected URL
+myRequest.open("GET", `${document.location.href}`);
+
+// Adding an event listener for debugging
+myRequest.onreadystatechange = function () {
+    if (this.readyState === 4) {
+        if (this.status === 200) {
+            console.log("Response received:", this.responseText);
+        } else {
+            console.error("Error:", this.status, this.statusText);
+        }
+    }
+};
+
+myRequest.send();
+
+console.log("Request object:", myRequest);
+
 // const inputName = document.querySelectorAll("input");
 // Add click listeners to each input element
 // inputName.forEach((input) => {
