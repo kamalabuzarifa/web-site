@@ -1,4 +1,3 @@
-
 // التحقق من خيار اللون المخزن في Local Storage
 let mainColors = localStorage.getItem("color_option");
 let mmColor = localStorage.getItem("mm_color_option");

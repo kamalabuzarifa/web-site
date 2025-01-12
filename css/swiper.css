@@ -1,0 +1,13 @@
+:root {
+    --main--color: #FF8C00;
+    --mm--color: #ff8c005c;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--main--color);
+}
+
+.swiper-pagination {
+    background-color: var(--mm--color);
+}
