@@ -528,3 +528,79 @@ const swiper = new Swiper('.slider-wrapper', {
         },
     },
 });
+
+//events
+// Create a new Date object with a valid date string
+let now = new Date();
+const months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+const Days = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat"
+];
+// Access the HTML elements
+let years = document.querySelector(".event .year");
+let month = document.querySelector(".event .month");
+let day = document.querySelector(".event .day");
+
+years.innerHTML = now.getFullYear();
+month.innerHTML = months[now.getMonth()];
+day.innerHTML = Days[now.getDay()];
+
+const hour = document.querySelector(".subscribe .hour");
+const clicktime = document.querySelector(".subscribe .clicktime");
+
+let intervalId = null; // لتخزين معرف الفاصل الزمني
+
+clicktime.onclick = () => {
+    if (intervalId) {
+        clearInterval(intervalId); // إذا كان الفاصل الزمني نشطًا، قم بإيقافه
+        intervalId = null;
+        clicktime.value = "Start Time"; // تغيير النص إلى "Start Time"
+    } else {
+        intervalId = setInterval(() => {
+            const now = new Date();
+            hour.textContent = now.toLocaleTimeString(); // تحديث الوقت
+        }, 1000); // يتم التحديث كل ثانية
+        clicktime.value = "Stop Time"; // تغيير النص إلى "Stop Time"
+    }
+};
+
+// عند تحميل الصفحة
+window.onload = function () {
+    // عرض نافذة Swal أولاً
+    Swal.fire({
+        title: 'Enter your name',
+        input: 'text',
+        inputValue: 'John',
+        inputAttributes: {
+            required: true
+        },
+        showCancelButton: true,
+        confirmButtonText: 'Submit',
+        inputValidator: (value) => {
+            if (!value) {
+                return 'You need to enter your name!';
+            }
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const value = result.value;
+            document.getElementById("customer").innerHTML = "See you " + value.toString();
+            document.getElementById("customerwelcome").innerHTML = value.toString();
+
+            // عرض محتوى الصفحة بعد إغلاق Swal
+            document.body.style.display = "block";
+        } else {
+            // في حال إلغاء النافذة بدون إدخال اسم
+            document.body.style.display = "block";
+        }
+    });
+};

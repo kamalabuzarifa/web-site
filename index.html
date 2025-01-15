@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<div>
+<body>
     <div class="go-down">
         <div class="page-indicator">
             <div class="top">
@@ -72,20 +72,25 @@
     <!-- Start Header -->
     <div class="header" id="header">
         <div class="containerm" id="up">
-            <a href="#" class="logo">Kamal Zarifa</a>
-
+            <div class="profilhead">
+                <img src="image/image-profile.jpg" alt="" class="infoimge">
+                <a href="#" class="logo">Kamal Zarifa</a>
+            </div>
             <ul class="main-nav">
                 <li><a href="#about">About</a></li>
-                <li><a href="#our-skills">Skills</a></li>
+                <li><a href="#services">services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li>
-                    <a href="#">Other Links</a>
+                    <a href="#">Other</a>
                     <!-- Start Megamenu -->
                     <div class="mega-menu">
                         <div class="image">
                             <img src="image/megamenu.png" alt="">
                         </div>
                         <ul class="links">
+                            <li>
+                                <a href="#our-skills"><i class="far fa-check-circle fa-fw"></i> Our Skills</a>
+                            </li>
                             <li>
                                 <a href="#timeline"><i class="far fa-comments fa-fw"></i> Timeline</a>
                             </li>
@@ -95,28 +100,19 @@
                             <li>
                                 <a href="#testimonials"><i class="far fa-building fa-fw"></i> Testimonials</a>
                             </li>
-                            <li>
-                                <a href="#our-skills"><i class="far fa-check-circle fa-fw"></i> Our Skills</a>
-                            </li>
-                            <li>
-                                <a href="#work-steps"><i class="far fa-clipboard fa-fw"></i> How It Works</a>
-                            </li>
                         </ul>
                         <ul class="links">
                             <li>
-                                <a href="#events"><i class="far fa-calendar-alt fa-fw"></i> Events</a>
+                                <a href="#work-steps"><i class="far fa-clipboard fa-fw"></i> How It Works</a>
                             </li>
                             <li>
-                                <a href="#pricing"><i class="fas fa-server fa-fw"></i> Pricing Plans</a>
+                                <a href="#events"><i class='bx bxs-graduation'></i> Study </a>
                             </li>
                             <li>
-                                <a href="#videos"><i class="far fa-play-circle fa-fw"></i> Top Videos</a>
+                                <a href="#discount"><i class="fas fa-percent fa-fw"></i> Request</a>
                             </li>
                             <li>
-                                <a href="#stats"><i class="far fa-chart-bar fa-fw"></i> Stats</a>
-                            </li>
-                            <li>
-                                <a href="#discount"><i class="fas fa-percent fa-fw"></i> Request A Discount</a>
+                                <a href="#massge"><i class="fas fa-server fa-fw"></i> Massage</a>
                             </li>
                         </ul>
                     </div>
@@ -130,7 +126,7 @@
     <section class="Landing-Page">
         <div class="overlay"></div>
         <div class="introduction-text">
-            <h1>Hello,<span>my friend</span></h1>
+            <h1>Hello,<span>my <span id="customerwelcome"></span></span></h1>
             <div>
                 <p>Looking to bring your ideas to life?</p>
                 <span>I create stunning, user-friendly websites that make your brand stand out.
@@ -239,34 +235,6 @@
         </div>
     </div>
     <!-- End Services -->
-    <!-- Start Our Skills -->
-    <div class="contLine" id="our-skills">
-        <div class="our-skills">
-            <h2 class="main-title">Skills</h2>
-            <div class="containerm">
-                <img src="image/skills.png" alt="">
-                <ul class="skills">
-                    <li data-width="80%">
-                        <p>html</p>
-                        <span style="width:80% ;"></span>
-                    </li>
-                    <li data-width="85%">
-                        <p>CSS</p>
-                        <span style="width:85% ;"></span>
-                    </li>
-                    <li data-width="70%">
-                        <p>JavaScript</p>
-                        <span style="width:70% ;"></span>
-                    </li>
-                    <li data-width="80%">
-                        <p>Php</p>
-                        <span style="width:80% ;"></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Our Skills -->
     <!-- Start gallery -->
     <div class="contLine" id="gallery">
         <div class="gallrym">
@@ -338,6 +306,34 @@
         </div>
     </div>
     <!-- End gallery -->
+    <!-- Start Our Skills -->
+    <div class="contLine" id="our-skills">
+        <div class="our-skills">
+            <h2 class="main-title">Skills</h2>
+            <div class="containerm">
+                <img src="image/skills.png" alt="">
+                <ul class="skills">
+                    <li data-width="80%">
+                        <p>html</p>
+                        <span style="width:80% ;"></span>
+                    </li>
+                    <li data-width="85%">
+                        <p>CSS</p>
+                        <span style="width:85% ;"></span>
+                    </li>
+                    <li data-width="70%">
+                        <p>JavaScript</p>
+                        <span style="width:70% ;"></span>
+                    </li>
+                    <li data-width="80%">
+                        <p>Php</p>
+                        <span style="width:80% ;"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Our Skills -->
     <!-- Start Timeline -->
     <div class="contLine" id="timeline">
         <div class="timelinem">
@@ -591,106 +587,6 @@
         </div>
     </div>
     <!-- End Features -->
-    <!-- Start Work Steps -->
-    <div class="contLine">
-        <div class="work-steps" id="work-steps">
-            <h2 class="main-title" style="font-size: 20px;">How does it work?</h2>
-            <div class="workcont">
-                <img src="image/our-work.png" alt="our-work" class="image">
-                <div class="info">
-                    <div class="box">
-                        <img src="image/BusinessAnalysis.png" alt="Business Analysis">
-                        <div class="text">
-                            <h3>Business Analysis</h3>
-                            <p>
-                                Is the process of understanding business needs, identifying challenges, and proposing
-                                solutions to achieve
-                                organizational goals. It involves gathering requirements, analyzing processes, and
-                                collaborating with stakeholders to
-                                design effective strategies. The ultimate goal is to bridge the gap between business
-                                objectives and technology or
-                                process improvements.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <img src="image/Architecture.png" alt="Architecture " />
-                        <div class="text">
-                            <h3>Architecture</h3>
-                            <p>
-                                Is the art and science of designing structures and systems. It balances function,
-                                aesthetics, and durability, ensuring
-                                spaces serve their purpose while inspiring creativity and connection. Each project
-                                begins with a vision, shaped by
-                                design principles, user needs, and environmental context, brought to life through
-                                planning and construction.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <img src="image/Development.png" alt="Developement" />
-                        <div class="text">
-                            <h3>Developement</h3>
-                            <p>
-                                Is the journey of turning ideas into reality. It starts with planning, followed by
-                                design, programming, quality testing,
-                                and finally, deployment. Success depends on creativity, precision, and teamwork.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Work Steps -->
-    <!-- Start Events -->
-    <div class="contLine">
-        <div class="event" id="events">
-            <div class="dots dots-up"></div>
-            <div class="dots dots-down"></div>
-            <h2 class="main-title">Latest Events</h2>
-            <div class="container">
-                <img src="images/events.png" alt="">
-                <div class="info">
-                    <div class="time">
-                        <div class="unit">
-                            <span>15</span>
-                            <span>Days</span>
-                        </div>
-                        <div class="unit">
-                            <span>08</span>
-                            <span>Hours</span>
-                        </div>
-                        <div class="unit">
-                            <span>45</span>
-                            <span>Minutes</span>
-                        </div>
-                        <div class="unit">
-                            <span>55</span>
-                            <span>Seconds</span>
-                        </div>
-                    </div>
-                    <h2 class="title">
-                        Tech Masters Event 2021
-                    </h2>
-                    <p class="description">
-                        "In a world filled with rapid changes, recent events stand as a testament to the strength of
-                        humanity in facing
-                        challenges. From groundbreaking scientific innovations to cultural and athletic achievements, we
-                        are reminded daily that
-                        optimism and teamwork are the keys to building a better future. Let us continue to follow hope
-                        and make a difference!"</p>
-                </div>
-                <div class="subscribe">
-                    <form action="">
-                        <input type="email" placeholder="Enter Your Email" />
-                        <input type="submit" value="Subscribe" />
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Start Events -->
     <!-- End Testimonials -->
     <div class="contLine" id="testimonials">
         <div class="testimonialsm">
@@ -812,6 +708,101 @@
         </div>
     </div>
     <!-- End Testimonials -->
+    <!-- Start Work Steps -->
+    <div class="contLine">
+        <div class="work-steps" id="work-steps">
+            <h2 class="main-title" style="font-size: 20px;">How does it work?</h2>
+            <div class="workcont">
+                <img src="image/our-work.png" alt="our-work" class="image">
+                <div class="info">
+                    <div class="box">
+                        <img src="image/BusinessAnalysis.png" alt="Business Analysis">
+                        <div class="text">
+                            <h3>Business Analysis</h3>
+                            <p>
+                                Is the process of understanding business needs, identifying challenges, and proposing
+                                solutions to achieve
+                                organizational goals. It involves gathering requirements, analyzing processes, and
+                                collaborating with stakeholders to
+                                design effective strategies. The ultimate goal is to bridge the gap between business
+                                objectives and technology or
+                                process improvements.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="image/Architecture.png" alt="Architecture " />
+                        <div class="text">
+                            <h3>Architecture</h3>
+                            <p>
+                                Is the art and science of designing structures and systems. It balances function,
+                                aesthetics, and durability, ensuring
+                                spaces serve their purpose while inspiring creativity and connection. Each project
+                                begins with a vision, shaped by
+                                design principles, user needs, and environmental context, brought to life through
+                                planning and construction.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="image/Development.png" alt="Developement" />
+                        <div class="text">
+                            <h3>Developement</h3>
+                            <p>
+                                Is the journey of turning ideas into reality. It starts with planning, followed by
+                                design, programming, quality testing,
+                                and finally, deployment. Success depends on creativity, precision, and teamwork.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Work Steps -->
+    <!-- Start Events -->
+    <div class="contLine">
+        <div class="event" id="events">
+            <div class="dots dots-up"></div>
+            <div class="dots dots-down"></div>
+            <h2 class="main-title">Time study</h2>
+            <div class="container">
+                <img src="images/events.png" alt="">
+                <div class="info">
+                    <div class="time">
+                        <div class="unit">
+                            <span class="year"></span>
+                            <span>Years</span>
+                        </div>
+                        <div class="unit">
+                            <span class="month"></span>
+                            <span>Months</span>
+                        </div>
+                        <div class="unit">
+                            <span class="day"></span>
+                            <span>Days</span>
+                        </div>
+                    </div>
+                    <h2 class="title">
+                        Still studying for a bachelor's degree
+                    </h2>
+                    <p class="description">
+                        "I am a software engineer with over three years of experience in web application development and
+                        related frameworks. With
+                        strong technical skills and a commitment to excellence, I am passionate about programming and
+                        web design, aiming to
+                        achieve advanced expertise in the field. I excel both independently and as part of a team."</p>
+                </div>
+                <div class="subscribe">
+                    <form action="">
+                        <p class="hour"> </p>
+                        <input class="clicktime" type="submit" value="Time" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Events -->
     <!-- Start Discount -->
     <div class="contLine">
         <div class="discount" id="discount">
@@ -857,8 +848,22 @@
         </div>
     </div>
     <!-- End Discount -->
+    <!-- massge -->
+    <!-- Start Video -->
+    <div class="contLine">
+        <div class="video" id="massge">
+            <video src="image/awesome-video.mp4" autoplay muted loop></video>
+            <div class="text">
+                <p id="customer">See you </p>
+                <p>Thank you very much for visiting my profile page, I am very pleased with your interest, Best
+                    regards.</p>
+                <p>kamal zarifa</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Video -->
+    <!-- massge  -->
     <!-- Start Footer -->
-    <!-- <div class="container"> -->
     <div class="footer" id="footer">
         <div class="containermm">
             <div class="box">
@@ -939,10 +944,11 @@
         </div>
         <p class="copyright">&copy;2024<span> Kamal </span> All Right Reserved</p>
     </div>
-    <!-- </div> -->
     <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/master.js"></script>
-    </body>
+
+</body>
 
 </html>
