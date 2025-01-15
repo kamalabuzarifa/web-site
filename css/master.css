@@ -25,6 +25,18 @@
     background-color: var(--mm--color) !important;
 }
 
+.swal2-confirm {
+    background-color:  var(--mm--color) !important; /* اللون الأخضر */
+    color: white !important; /* النص الأبيض */
+    border: none !important; /* إزالة الحدود */
+    padding: 10px 20px !important; /* تحسين التباعد */
+    border-radius: 5px !important; /* حواف مستديرة */
+}
+
+/* تأثير عند تمرير الفأرة */
+.swal2-confirm:hover {
+    background-color:  var(--main--color) !important;
+}
 .dots {
     background-image: url(../image/dots.png);
     height: 186px;
