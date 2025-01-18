@@ -579,28 +579,22 @@ window.onload = function () {
     Swal.fire({
         title: 'Enter your name',
         input: 'text',
-        inputValue: 'John',
+        inputValue: '',
         inputAttributes: {
             required: true
         },
-        showCancelButton: true,
-        confirmButtonText: 'Submit',
+        showCancelButton: false,
+        confirmButtonText: 'Ok',
         inputValidator: (value) => {
             if (!value) {
                 return 'You need to enter your name!';
+            } else if (/[^a-zA-Z\u0621-\u064A]/.test(value) || /\s/.test(value) || /[0-9]/.test(value)) {
+                return 'Please enter a valid name without numbers, spaces, or special characters!';
             }
         }
     }).then((result) => {
-        if (result.isConfirmed) {
-            const value = result.value;
-            document.getElementById("customer").innerHTML = "See you " + value.toString();
-            document.getElementById("customerwelcome").innerHTML = value.toString();
-
-            // عرض محتوى الصفحة بعد إغلاق Swal
-            document.body.style.display = "block";
-        } else {
-            // في حال إلغاء النافذة بدون إدخال اسم
-            document.body.style.display = "block";
-        }
+        const value = result.value;
+        document.getElementById("customer").innerHTML = "See you " + value.toString();
+        document.getElementById("customerwelcome").innerHTML = value.toString();
     });
 };
